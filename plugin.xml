@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="OS_CheckApp_Plugin" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="OS.Plugin.CheckApp" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>OSCheckAppPlugin</name>
+    <license>MIT</license>
     <js-module name="OSCheckAppPlugin" src="www/OSCheckAppPlugin.js">
         <clobbers target="cordova.plugins.OSCheckAppPlugin" />
     </js-module>
