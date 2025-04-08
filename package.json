@@ -1,0 +1,19 @@
+{
+  "name": "oscheckappplugin",
+  "version": "1.0.0",
+  "description": "cordova plugin to check if app is installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bassem-sultan/OSCheckAppPlugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bassem-sultan/OSCheckAppPlugin/issues"
+  },
+  "homepage": "https://github.com/bassem-sultan/OSCheckAppPlugin#readme"
+}

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="OS_CheckApp_Plugin" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>OSCheckAppPlugin</name>
+    <js-module name="OSCheckAppPlugin" src="www/OSCheckAppPlugin.js">
+        <clobbers target="cordova.plugins.OSCheckAppPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="OSCheckAppPlugin">
+                <param name="android-package" value="OS_CheckApp_Plugin.OSCheckAppPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <queries>
+                <package android:name="com.facebook.katana" />
+                <package android:name="ae.uaepass.mainapp.qa" />
+                <package android:name="ae.uaepass.mainapp.stg" />
+                <package android:name="ae.uaepass.mainapp" />
+                <package android:name="puraapp" />
+                <package android:name="ae.purehealth.pura" />
+                <package android:name="ae.purehealth.pura.qa.v2" />
+                <package android:name="ae.purehealth.pura2.qa" />
+            </queries>
+        </config-file>
+
+        <source-file src="src/android/OSCheckAppPlugin.java"
+            target-dir="src/OS_CheckApp_Plugin/OSCheckAppPlugin" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="OSCheckAppPlugin">
+                <param name="ios-package" value="OSCheckAppPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>fb</string>
+                <string>uaepass</string>
+                <string>uaepassqa</string>
+                <string>puraapp</string>
+                <string>uaepassstg</string>
+            </array>
+        </config-file>
+
+        <source-file src="src/ios/OSCheckAppPlugin.m" />
+    </platform>
+</plugin>
