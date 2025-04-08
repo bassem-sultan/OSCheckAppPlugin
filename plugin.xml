@@ -6,6 +6,7 @@
         <clobbers target="cordova.plugins.OSCheckAppPlugin" />
     </js-module>
     <platform name="android">
+        <framework src="androidx.core:core:1.0.0" />
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="OSCheckAppPlugin">
                 <param name="android-package" value="OS_CheckApp_Plugin.OSCheckAppPlugin" />
@@ -47,4 +48,7 @@
 
         <source-file src="src/ios/OSCheckAppPlugin.m" />
     </platform>
+    <engines>
+        <engine name="cordova" version=">=11.0.0" />
+    </engines>
 </plugin>
